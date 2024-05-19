@@ -1,0 +1,13 @@
+version: '3'
+services:
+  website:
+    image: nginx:latest
+    container_name: webpage
+    volumes:
+      - /mnt/c/code/src/html:/usr/share/nginx/html
+    ports:
+      - 80:80
+    restart: always
+
+# Might give error 403, but I dunno if thats with this file or the html file that i did not make
+
